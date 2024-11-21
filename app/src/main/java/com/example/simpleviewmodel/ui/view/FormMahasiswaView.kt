@@ -35,9 +35,10 @@ fun FormMahasiswaView(
     var noTelpon by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var gender by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
 
     val listData: MutableList<String> = mutableListOf(
-        nama, email, noTelpon, alamat, gender
+        nama, email, noTelpon, alamat, gender, nim
     )
 
     Column(
@@ -57,6 +58,14 @@ fun FormMahasiswaView(
             onValueChange = {nama = it},
             label = { Text("Nama") },
             placeholder = { Text("Masukkan Nama Anda") }
+        )
+
+        TextField(
+            modifier = Modifier .fillMaxWidth() .padding(5.dp),
+            value = nim,
+            onValueChange = {nim = it},
+            label = { Text("Nim") },
+            placeholder = { Text("Masukkan NIM Anda") }
         )
 
         Row {

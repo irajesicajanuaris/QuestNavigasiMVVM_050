@@ -21,3 +21,9 @@ enum class Halaman{
     Data
 }
 
+@Composable
+fun Navigasi(
+    modifier: Modifier = Modifier,
+    viewModel: MahasiswaViewModel = viewModel(),
+    navHost: NavHostController = rememberNavController()
+) {}
